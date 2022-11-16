@@ -21,8 +21,8 @@ namespace SpaceShipGame
             var dis = new Snake();
             var util = new Utils();
 
-            xS = rnd.Next();
-            yS = rnd.Next();
+            xS = rnd.Next(10,120);
+            yS = rnd.Next(5,35);
 
             util.Display(xS, yS, Apple);
 

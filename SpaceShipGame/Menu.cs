@@ -5,6 +5,7 @@ class Menu
     public void ShowMenu()
     {
         var player = new Snake();
+        var game = new GameLoop();
 
 
         Console.BackgroundColor = ConsoleColor.Black;
@@ -27,7 +28,7 @@ class Menu
 
                 Console.WriteLine("MOVE WITH KEYS: A, S, W, D");
 
-                player.Player();
+                game.Game();
 
 
             }
