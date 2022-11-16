@@ -1,0 +1,7 @@
+﻿using SpaceShipGame;
+
+class HighScore
+{
+
+}
+

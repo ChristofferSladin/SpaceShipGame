@@ -3,20 +3,18 @@
 
     class Snake
     {
-        public List<string> SnakesLegnth;
+        public List<string> SnakesLegnth { get; set; }
         public int X { get; set; }
         public int Y { get; set; }
         public string S => "¤";
         public int Count { get; set; }
-        public int Width { get; set; }
-        public int Height { get; set; }
-
-
-
+       
         public void Player()
         {
-            X = 58;
-            Y = 15;
+            Console.SetWindowSize(150, 40);
+
+            X = 70;
+            Y = 25;
             Console.CursorVisible = false;
             var show = new Utils();
 
@@ -45,8 +43,8 @@
 
                             Y++;
 
-                            if (Y > 39)
-                                Y = 39;
+                            if (Y > 38)
+                                Y = 38;
 
                             show.Display(X, Y, S);
 
