@@ -1,56 +1,27 @@
 ﻿namespace SpaceShipGame
 {
+
     class Snake
     {
         public List<string> SnakesLegnth;
         public int X { get; set; }
         public int Y { get; set; }
-
-        public void Display(int x, int y, string s)
-        {
-            while (true)
-            {
-                if (Y <= 0)
-                {
-                    Y = 1;
-                    break;
-                }
-                if (Y > 29)
-                {
-                    Y--;
-                }
-
-                if (X <= 0)
-                {
-                    X = 1;
-                    break;
-                }
-                if (X >= 118) 
-                {
-                    X--;
-                }
-                break;
+        public string S => "¤";
+        public int Count { get; set; }
+        public int Width { get; set; }
+        public int Height { get; set; }
 
 
-            }
 
-            
-            Console.SetCursorPosition(X, Y);
-            Console.WriteLine(s);
-
-
-        }
         public void Player()
         {
-            int x = 45;
-            int y = 15;
+            X = 58;
+            Y = 15;
             Console.CursorVisible = false;
+            var show = new Utils();
 
             while (true)
             {
-                string s = "¤";
-
-
                 var move = Console.ReadKey(true).Key;
 
                 switch (move)
@@ -60,7 +31,10 @@
                         {
 
                             Y--;
-                            Display(X, Y, s);
+                            if (Y < 1)
+                                Y = 1;
+
+                            show.Display(X, Y, S);
 
                             break;
                         }
@@ -71,7 +45,10 @@
 
                             Y++;
 
-                            Display(X, Y, s);
+                            if (Y > 39)
+                                Y = 39;
+
+                            show.Display(X, Y, S);
 
                             break;
                         }
@@ -82,7 +59,10 @@
 
                             X--;
 
-                            Display(X, Y, s);
+                            if (X < 1)
+                                X = 1;
+
+                            show.Display(X, Y, S);
 
                             break;
                         }
@@ -93,7 +73,10 @@
 
                             X++;
 
-                            Display(X, Y, s);
+                            if (X > 147)
+                                X = 147;
+
+                            show.Display(X, Y, S);
 
                             break;
                         }

@@ -19,24 +19,18 @@ namespace SpaceShipGame
         {
             var rnd = new Random();
             var dis = new Snake();
+            var util = new Utils();
 
             xS = rnd.Next(5, 80);
             yS = rnd.Next(3, 45);
 
-            dis.Display(xS, yS, Apple);
+            util.Display(xS, yS, Apple);
 
 
             if (dis.X == xS || dis.Y == yS) 
             {
-                dis.SnakesLegnth.Add(Apple);
+                dis.Count++;
             }
-
-
-
-                
-
-
-
 
         }
     }

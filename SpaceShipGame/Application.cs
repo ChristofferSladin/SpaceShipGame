@@ -2,16 +2,38 @@
 
 class Application
 {
+    public int Height { get; set; } = Console.BufferHeight;
+    public int Width { get; set; } = Console.BufferWidth;
+
+
     public void Run()
     {
+        Console.SetWindowSize(150, 40);
+        
+        //Console.BackgroundColor = ConsoleColor.DarkRed;
+        Console.ForegroundColor = ConsoleColor.White;
+        
+        
+                        
         var character = new Snake();
         var apple = new Apples();
 
+        bool run = true;
+        while (run)
+        {
+            character.Player();
+
+            apple.Spawn();
+
+            var key = Console.ReadKey(true).Key;
+
+            if (key == ConsoleKey.Escape)
+            {
+                run = false;
+            }
+        }
+
         
-
-        character.Player();
-
-        apple.Spawn();
     }
 
 //    static void WriteHere(int x, int y, string s)
