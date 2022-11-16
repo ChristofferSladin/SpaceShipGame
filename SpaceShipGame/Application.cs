@@ -4,9 +4,14 @@ class Application
 {
     public void Run()
     {
-        var game = new MyTry();
+        var character = new Snake();
+        var apple = new Apples();
 
-        game.Player();
+        
+
+        character.Player();
+
+        apple.Spawn();
     }
 
 //    static void WriteHere(int x, int y, string s)
