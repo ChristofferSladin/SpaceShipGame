@@ -7,19 +7,25 @@ class Menu
         var player = new Snake();
 
 
-        Console.BackgroundColor = ConsoleColor.Green;
-        Console.ForegroundColor = ConsoleColor.Black;
+        Console.BackgroundColor = ConsoleColor.Black;
+        Console.ForegroundColor = ConsoleColor.Green;
         Console.SetCursorPosition(45, 5);
         Console.WriteLine("WELCOME TO THE MAIN MENU");
         
-        Console.WriteLine("\n\n\n\n1. PLAY THE GAME\n2.HIGH SCORE\nQ. Exit");
+        Console.WriteLine("\n\n\n\n1. PLAY THE GAME\n2. HIGH SCORE\nQ. Exit");
         var sel = Console.ReadLine();
 
         while (true)
         {
             if (sel == "1")
             {
-                Console.WriteLine("\n\nMove With Keys: A, S, W, D");
+                Console.Clear();
+
+                Console.SetCursorPosition(65, 5);
+                Console.WriteLine("TO START PLAYING");
+                Console.SetCursorPosition(61, 7);
+
+                Console.WriteLine("MOVE WITH KEYS: A, S, W, D");
 
                 player.Player();
 
