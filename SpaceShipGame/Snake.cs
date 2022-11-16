@@ -22,6 +22,8 @@
             {
                 var move = Console.ReadKey(true).Key;
 
+                // här ska det vara en if / om kordinater krockar med befintliga, avsluta loopen == död, game over
+
                 switch (move)
                 {
                     case

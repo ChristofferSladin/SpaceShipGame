@@ -22,14 +22,21 @@ class Menu
                 Console.WriteLine("\n\nMove With Keys: A, S, W, D");
 
                 player.Player();
+
+
             }
             if (sel == "2")
             {
+                var show = new HighScore();
 
             }
             if(sel.ToLower() == "q")
             {
-                Console.WriteLine("Thank you for playing");
+                Console.SetCursorPosition(45, 15);
+                Console.WriteLine("THANK YOU FOR PLAYING\n");
+                Console.SetCursorPosition(44, 18);
+                Console.WriteLine("WE HOPE TO SEE YOU AGAIN");
+                Console.ReadKey();
                 break;
             }
 
