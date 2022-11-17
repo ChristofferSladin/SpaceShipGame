@@ -7,7 +7,6 @@
             Console.Clear();
             Console.SetCursorPosition(x, y);
             Console.WriteLine(s);
-
         }
     }
 }
