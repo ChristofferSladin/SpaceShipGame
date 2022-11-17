@@ -7,8 +7,12 @@ class GameLoop
         var obj = new Apples();
         var cha = new Snake();
 
-        obj.Spawn();
+        
+            obj.Spawn();
+        
+            cha.Player();
+            
 
-        cha.Player();
+        
     }
 }

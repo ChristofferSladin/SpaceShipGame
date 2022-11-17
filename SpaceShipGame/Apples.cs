@@ -11,8 +11,8 @@ namespace SpaceShipGame
     class Apples
     {
         public string Apple = "+";
-        public int xS;
-        public int yS;
+        public int xS { get; set; }
+        public int yS { get; set; }
 
 
         public void Spawn()
